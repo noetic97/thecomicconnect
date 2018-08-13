@@ -1,10 +1,10 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { render } from 'react-dom';
+import './index.css';
+import App from './components/App';
 
-const title = 'The Comic Connect';
-
-ReactDOM.render(
-  <h1>{title}</h1>,
+render(
+  <App />,
   document.getElementById('app'),
 );
 
