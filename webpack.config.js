@@ -14,32 +14,32 @@ module.exports = {
         // test: /\.js$/,
         test: /\.(js|jsx)$/,
         exclude: /node_modules/,
-        use: ['babel-loader', 'eslint-loader']
+        use: ['babel-loader', 'eslint-loader'],
       },
       {
         test: /\.css$/,
         use: ExtractTextPlugin.extract(
           {
             fallback: 'style-loader',
-            use: ['css-loader']
+            use: ['css-loader'],
           })
-      }
-    ]
+      },
+    ],
   },
   resolve: {
-    extensions: ['*', '.js', '.jsx']
+    extensions: ['*', '.js', '.jsx'],
   },
   output: {
-    path: __dirname + '/dist',
+    path: `${__dirname}/dist`,
     publicPath: '/',
-    filename: 'bundle.js'
+    filename: 'bundle.js',
   },
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
-    new ExtractTextPlugin({filename: 'style.css'})
+    new ExtractTextPlugin({ filename: 'style.css' }),
   ],
   devServer: {
     contentBase: './dist',
-    hot: true
-  }
+    hot: true,
+  },
 };
