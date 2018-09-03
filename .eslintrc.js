@@ -25,11 +25,11 @@ module.exports = {
       "describe": false,
       "it": false,
       "beforeEach": false,
-      "should": false
+      "should": false,
     },
     "parserOptions": {
       "ecmaFeatures": {
-        "jsx": true
+        "jsx": true,
       }
     }
 };

@@ -8,10 +8,9 @@
     "app.bundle.js.map"
   ],
   "scripts": {
-    "start": "webpack-dev-server --config ./webpack.config.js --mode development",
+    "start": "webpack-dev-server --config ./webpack.dev.js",
     "server": "nodemon server.js",
-    "build": "webpack --mode production",
-    "dev": "webpack --mode development",
+    "build": "webpack --config ./webpack.prod.js",
     "test": "NODE_ENV=test ./node_modules/.bin/mocha test/*",
     "lint": "./node_modules/.bin/eslint ./"
   },
@@ -40,22 +39,27 @@
     "eslint-plugin-import": "^2.13.0",
     "eslint-plugin-jsx-a11y": "^6.1.1",
     "eslint-plugin-react": "^7.10.0",
-    "extract-text-webpack-plugin": "^4.0.0-beta.0",
+    "image-webpack-loader": "^4.3.1",
+    "node-sass": "^4.9.3",
     "nodemon": "^1.18.3",
     "pg": "^7.4.3",
     "react-hot-loader": "^4.3.4",
+    "sass-loader": "^7.1.0",
     "style-loader": "^0.22.1",
-    "webpack": "^4.16.5",
-    "webpack-cli": "^3.1.0",
-    "webpack-dev-server": "^3.1.5"
+    "url-loader": "^1.1.1"
   },
   "dependencies": {
     "@material-ui/core": "^1.4.3",
     "body-parser": "^1.18.3",
+    "copy-webpack-plugin": "^4.5.2",
     "express": "^4.16.3",
     "knex": "^0.15.2",
-    "normalize.css": "^8.0.0",
+    "mini-css-extract-plugin": "^0.4.2",
     "react": "^16.4.2",
-    "react-dom": "^16.4.2"
+    "react-dom": "^16.4.2",
+    "webpack": "^4.17.1",
+    "webpack-cli": "^3.1.0",
+    "webpack-dev-server": "^3.1.5",
+    "webpack-merge": "^4.1.4"
   }
 }

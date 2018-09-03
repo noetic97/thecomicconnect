@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
-import './styles/App.css';
+import Header from './Header';
 
 class App extends Component {
   constructor() {
     super();
     this.state = {
-      title: 'The Comic Connect',
+      title: 'take a pick!',
     };
   }
 
@@ -13,7 +13,8 @@ class App extends Component {
     return (
       <div className="App">
         <div className="App-header">
-          <h1 className="main-title">{this.state.title}</h1>
+          <Header />
+          <h2 className="under-header-title">{this.state.title}</h2>
         </div>
       </div>
     );
